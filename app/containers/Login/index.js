@@ -20,6 +20,7 @@ import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
 
+import { Redirect } from "react-router-dom"
 import { Row } from "../../components/Row";
 import { Column } from "../../components/Column";
 
@@ -40,7 +41,7 @@ export function Login({
       alignContent="null"
       alignItems="null"
     >
-
+      {login.successLogin && <Redirect exact to="/" />}
       <Helmet>
         <title>Login</title>
         <meta name="description" content="Login to Hellobuild" />

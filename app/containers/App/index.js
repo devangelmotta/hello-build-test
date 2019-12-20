@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import { RouteProtected } from "../../utils/LocalStorageSessions/routeProtected";
 import Login from "containers/Login"
 import SignUp from "containers/SignUp";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -60,8 +61,8 @@ export function App({
       <Switch>
         <Route exact path="/signin" component={Login} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/" component={Calendar} />
-        <Route exact path="/github" component={Github} />
+        <RouteProtected path="/github" component={Github} />
+        <RouteProtected path="/" component={Calendar} />
         <Route exact path="/generate-token" component={TokenProvider} />
         <Route path="" component={NotFoundPage} />
       </Switch>
