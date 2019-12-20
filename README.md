@@ -7,8 +7,10 @@ El proyecto se encuentra en la estructura general como
   - Containers
   - Secciones
   
-  -- Los componentes son completamente tontos y reusables, la mayoría construidos con styled-ementes y solo reciben props.
+-- Los componentes son completamente tontos y reusables, la mayoría construidos con styled-ementes y solo reciben props.
+
 -- Los Containers albergan la lógica de datos representacionales y llamadas a recursos. Los contenedores siguen el patron de baja acoplabilidad por tanto se intenta que cada uno de ellos sea independiente y contenga en sí mismo todo lo necesario para funcionar. Es por eso que se usa la característica de Redux de inyección de reductores y de esa forma mantener el código dinámico y separado. Los Containers también mantienen su propio estilo aislado en caso de tenerlo. 
+
 -- Secciones: Son simplemente más componentes con la diferencia que son menos reusables, son producto directo de la combinación de otros altamente reusables. El motivo de esto es que, al mantener ese patrón, la app puede crecer sin ver cómo pierde rápidamente el orden y escalabilidad: los componentes agnósticos se mantienen aislados, y componentes más complejos y particulaes se mantienen como una sesión específica de una screen, sea por ejemplo un navbar específico. Sessiones se mantiene dentro del Container correspondiente.
 
 Se ha usado además Redux y Saga para el manejo de estado y petición de servicios. La ventaja de Saga es que permite mantener las peticiones lejos de los componenetes de interfaz. También se usó immer, selector y memo para economizar cómputo tras las renderizaciones. 
@@ -37,7 +39,7 @@ Clone el repositorio:
 
 First Tab:
 ```sh
- git clone --depth url-git
+ git clone --depth https://github.com/devangelmotta/hello-build-test.git <FRIENDLY_NAME>
 ```
 Instale dependencias: 
 ```sh
