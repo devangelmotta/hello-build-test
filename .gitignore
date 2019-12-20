@@ -3,6 +3,8 @@ coverage
 build
 node_modules
 stats.json
+.gitignore
+.gitattributes
 
 # Cruft
 .DS_Store
