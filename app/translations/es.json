@@ -1,0 +1,8 @@
+{
+  "hellobuild.components.Header.features": "",
+  "hellobuild.components.Header.home": "",
+  "hellobuild.container.login.sign": "Ingresar",
+  "hellobuild.container.login.emailLabel": "Correo",
+  "hellobuild.container.login.passwordLabel": "Contraseña",
+  "hellobuild.container.login.signSuggest": "¿Ya estás registrado?"
+}

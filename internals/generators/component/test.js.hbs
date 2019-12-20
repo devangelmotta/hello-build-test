@@ -1,0 +1,80 @@
+/**
+*
+* Tests for {{ properCase name }}
+*
+*
+*/
+
+import React from 'react';
+import { render } from 'react-testing-library';
+{{#if wantMessages}}
+import { IntlProvider } from 'react-intl';
+{{/if}}
+// import 'jest-dom/extend-expect'; // add some helpful assertions
+
+{{#if wantMessages}}
+import { DEFAULT_LOCALE } from '../../../i18n';
+{{/if}}
+
+{{#if styled-components}}
+import styled, { findAll } from 'styled-components/test-utils'
+import { {{properCase name}} } from "../index.js";
+
+ReactDOM.render(
+<main>
+  <{{ properCase name}} display="flex" width="80%" padding=" 20 20 20 20" />
+
+  <{{ properCase name}} display="block" width="50%" padding=" 20 80 20 80" />
+  {/** Another tests **/}
+</main>, document.body
+);
+findAll(document.body, {{ properCase name}})
+
+{{else}}
+
+describe('
+<{{ properCase name }} />', () => {
+it('Expect to not log errors in console', () => {
+const spy = jest.spyOn(global.console, 'error');
+{{#if wantMessages}}
+render(
+<IntlProvider locale={DEFAULT_LOCALE}>
+  <{{ properCase name }} />
+</IntlProvider>,
+);
+
+{{else}}
+render(
+<{{ properCase name }} />);
+{{/if}}
+expect(spy).not.toHaveBeenCalled();
+});
+
+it('Expect to have additional unit tests specified', () => {
+expect(true).toEqual(false);
+});
+
+/**
+* Unskip this test to use it
+*
+* @see {@link https://jestjs.io/docs/en/api#testskipname-fn}
+*/
+it.skip('Should render and match the snapshot', () => {
+{{#if wantMessages}}
+const {
+container: { firstChild },
+} = render(
+<IntlProvider locale={DEFAULT_LOCALE}>
+  <{{ properCase name }} />
+</IntlProvider>,
+);
+{{else}}
+const {
+container: { firstChild },
+} = render(
+<{{ properCase name }} />);
+{{/if}}
+expect(firstChild).toMatchSnapshot();
+});
+});
+{{/if}}

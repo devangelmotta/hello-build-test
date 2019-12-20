@@ -1,0 +1,8 @@
+{
+  "hellobuild.components.Header.features": "",
+  "hellobuild.components.Header.home": "",
+  "hellobuild.container.login.sign": "Enjoy",
+  "hellobuild.container.login.emailLabel": "Email",
+  "hellobuild.container.login.passwordLabel": "Password",
+  "hellobuild.container.login.signSuggest": "Already signup?"
+}
