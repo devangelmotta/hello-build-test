@@ -52,4 +52,3 @@ Para levantar en modo dev ejecute :
 ```
 En el package.json podrá todas los comandos disponibles.
 
-El test no ha quedado completo pues tiene varios detalles a mejorar, sin embargo he hecho todo lo que he podido y lamento no haber tenido más tiempo para entregar algo ejemploar.
